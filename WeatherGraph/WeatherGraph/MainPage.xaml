@@ -74,31 +74,30 @@
                     TextColor="White"
                     Clicked="OnGetWeatherButtonClicked" />
         </Grid>
+      
+            <StackLayout Padding="10">
 
-     
+                <Label Text="Location" FontSize="20" FontAttributes="Bold" TextColor="Black" />
+
+                <Label Text="{Binding Title}" FontSize="18" FontAttributes="Italic" TextColor="Black" />
+
+                <Label Text="Temperature" FontSize="20" FontAttributes="Bold" TextColor="Black" />
+
+                <Label x:Name="Temperature" FontSize="18" FontAttributes="Italic" TextColor="Black" />
+
+                <Label Text="Wind Speed" FontSize="20" FontAttributes="Bold" TextColor="Black" />
+
+                <Label Text="{Binding speed}" FontSize="18" FontAttributes="Italic" TextColor="Black" />
+
+                <Label Text="Humidity" FontSize="20" FontAttributes="Bold" TextColor="Black" />
+
+                <Label Text="{Binding humidity}" FontSize="18" FontAttributes="Italic" TextColor="Black" />
+
+            </StackLayout>
+        
+
+
     </StackLayout>
-
-    <ContentPage.Content>
-        <StackLayout Padding="10">
-            <Label Text="Location" Style="{StaticResource labelStyle}" />
-
-            <Label Text="{Binding Title}" Style="{StaticResource labelResultStyle}" />
-
-            <Label Text="Temperature" Style="{StaticResource labelStyle}" />
-
-            <Label Text="{Binding temp}" Style="{StaticResource labelResultStyle}" />
-
-            <Label Text="Wind Speed" Style="{StaticResource labelStyle}" />
-
-            <Label Text="{Binding speed}" Style="{StaticResource labelResultStyle}" />
-
-            <Label Text="Humidity" Style="{StaticResource labelStyle}" />
-
-            <Label Text="{Binding humidity}" Style="{StaticResource labelResultStyle}" />
-
-        </StackLayout>
-    </ContentPage.Content>
-
 
 
 </ContentPage>

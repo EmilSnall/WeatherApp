@@ -12,8 +12,8 @@ namespace WeatherGraph
         public App()
         {
             InitializeComponent();
-            //App.WeatherViewModel.WebQuestion("");
             MainPage = new MainPage();
+           
         }
 
         protected override void OnStart()

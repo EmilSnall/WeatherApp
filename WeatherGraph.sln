@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherGraph.Android", "Wea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherGraph.UWP", "WeatherGraph\WeatherGraph.UWP\WeatherGraph.UWP.csproj", "{8C4395DF-8915-459F-8490-8FFB4D47D33F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherGraph", "WeatherGraph\WeatherGraph\WeatherGraph.csproj", "{D2D1CC5D-01AD-4691-9CC8-FCB2FEDC281D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherGraph", "WeatherGraph\WeatherGraph\WeatherGraph.csproj", "{D2D1CC5D-01AD-4691-9CC8-FCB2FEDC281D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

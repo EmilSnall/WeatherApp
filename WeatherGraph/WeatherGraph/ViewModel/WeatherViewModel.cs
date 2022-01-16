@@ -13,21 +13,17 @@ namespace WeatherGraph.ViewModel
 {
     public class WeatherViewModel
     {
-        private ObservableCollection<WeatherData> _weatherDatas= new ObservableCollection<WeatherData>();
+        public WeatherData.Main WeatherDatas= new WeatherData.Main();
 
-        public ObservableCollection<WeatherData> WeatherDatas
-        {
-            get
-            {
-                return this._weatherDatas;
-            }
-        }
+        
+
+        //public event PropertyChangedEventHandler PropertyChanged;
 
         public async void WebQuestion(string location)
         {
             try
             {
-                location = "Gothenburg";
+                
                 string URL = "http://api.openweathermap.org/data/2.5/weather?q=" + location + "&APPID=66118e8ea1f62d5915c9b6126437259d&units=metric";
                 HttpClient httpClient = new HttpClient();
                 HttpResponseMessage response = await httpClient.GetAsync(new Uri(URL));
@@ -37,10 +33,11 @@ namespace WeatherGraph.ViewModel
                 {
                    
                     string content = await response.Content.ReadAsStringAsync();
-                    var _weatherDatas = (JsonConvert.DeserializeObject<WeatherData>(content));
-                   
+                    var _weatherDatas = (JsonConvert.DeserializeObject<WeatherData.Rootobject>(content));
+                    WeatherDatas =_weatherDatas.main;
                             
                 }
+                
             }
             catch (Exception ex)
             {

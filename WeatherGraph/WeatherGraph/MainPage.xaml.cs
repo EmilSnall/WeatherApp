@@ -15,14 +15,17 @@ namespace WeatherGraph
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = App.WeatherViewModel;
+            
         }
        
         private void OnGetWeatherButtonClicked(object sender, EventArgs e)
         {
-            
+           
             App.WeatherViewModel.WebQuestion(_cityEntry.Text);
-          
+            BindingContext = App.WeatherViewModel.WeatherDatas;
+           
+
+
         }
 
        
